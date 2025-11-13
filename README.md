@@ -10,23 +10,28 @@ WPAC tokens are wrapped tokens of the Wrapto contracts. The token contract is im
 
 To get started with the project, follow these steps:
 
-1. Clone this repository to your local machine:
+```bash
+git clone https://github.com/wrapto/erc-20.git
+cd erc-20
+npm install
+```
 
-   ```bash
-   git clone <repository_url>
-   ```
+## Deploying the Smart Contract
 
-2. Navigate to the project directory:
+You need to manually adjust parameters inside [hardhat.config.ts](./hardhat.config.ts)
+like defining RPC, Account (Private Key), etc.
 
-   ```bash
-   cd TeleWrapped
-   ```
+To deploy:
 
-3. Install dependencies:
+```bash
+npx hardhat run ./scripts/deploy.ts --network <NETWORK-NAME>
+```
 
-   ```bash
-   npm install
-   ```
+To upgrade:
+
+```bash
+npx hardhat run ./scripts/upgrade.ts --network <NETWORK-NAME>
+```
 
 ## Available Scripts
 
@@ -42,8 +47,9 @@ In the project directory, you can run the following scripts:
 
 ## Contract Overview
 
-The main contract file is `wpac.sol` which implements the ERC20 interface. It also integrates functionalities for bridging PAC tokens from one blockchain to another. The contract is upgradeable and follows the Ownable and Pausable patterns for security and control.
-
+The main contract file is `wpac.sol` which implements the ERC20 interface.
+It also integrates functionalities for bridging PAC tokens from one blockchain to another.
+The contract is upgradeable and follows the Ownable and Pausable patterns for security and control.
 
 ## Project Structure
 
