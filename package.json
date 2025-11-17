@@ -1,7 +1,7 @@
 {
-	"name": "telewrapped",
-	"description": "wrapped tokens of teleport protocol contracts.",
-	"version": "1.0.0",
+	"name": "WPAC",
+	"description": "Wrapped PAC token contract.",
+	"version": "2.0.0",
 	"main": "index.js",
 	"workspaces": [
 		"contracts/evm/*",
@@ -10,25 +10,29 @@
 	"scripts": {
 		"node": "npx hardhat node",
 		"compile": "cross-env TS_NODE_TRANSPILE_ONLY=true hardhat compile",
-		"clean": "shx rm -rf ./artifacts ./cache ./coverage ./src/types ./coverage.json && yarn typechain",
+		"clean": "rm -rf ./artifacts ./cache ./coverage ./src/types ./coverage.json",
 		"lint:sol": "solhint --config ./.solhint.json --max-warnings 0 \"contracts/**/*.sol\"",
 		"lint:ts": "eslint --config ./.eslintrc.yml --ignore-path ./.eslintignore --ext .js,.ts .",
 		"test": "hardhat test",
 		"typechain": "cross-env TS_NODE_TRANSPILE_ONLY=true hardhat typechain"
 	},
 	"devDependencies": {
-		"@nomicfoundation/hardhat-toolbox": "^4.0.0",
-		"hardhat": "^2.21.0",
-		"husky": "^8.0.3"
+		"@nomicfoundation/hardhat-toolbox": "^6.1.0",
+		"@typescript-eslint/eslint-plugin": "^8.0.0",
+		"@typescript-eslint/parser": "^8.0.0",
+		"cross-env": "^10.1.0",
+		"eslint": "^8.57.0",
+		"hardhat": "^2.26.5",
+		"solhint": "^6.0.1"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "MIT",
 	"dependencies": {
-		"@nomicfoundation/hardhat-verify": "^3.0.7",
-		"@openzeppelin/contracts": "^5.0.2",
-		"@openzeppelin/contracts-upgradeable": "^4.7.3",
-		"@openzeppelin/hardhat-upgrades": "^3.0.5",
-		"dotenv": "^16.4.5"
-	}
+		"@openzeppelin/contracts": "^5.5.0",
+		"@openzeppelin/contracts-upgradeable": "^5.5.0",
+		"@openzeppelin/hardhat-upgrades": "^3.9.1",
+		"dotenv": "^17.2.3"
+	},
+	"packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
