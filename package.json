@@ -1,6 +1,6 @@
 {
-	"name": "telewrapped",
-	"description": "wrapped tokens of teleport protocol contracts.",
+	"name": "wpac-erc-20",
+	"description": " Wrapped PAC (WPAC) token contract for bridging PAC coins between EVM blockchains and Pactus blockchain.",
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
